@@ -1,0 +1,128 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.navbar-nav > li > a, .navbar-brand {
+    padding-top:15px !important; padding-bottom:0 !important;
+    height: 60px;
+    font-size: 25px;
+}
+
+.techfront{
+    background-color: #1c1c1c;
+}
+
+a{
+    color: white;
+}
+
+.about{
+    padding-top: 15px;
+}
+
+hr{
+    background-color: white;
+    height: auto;
+}
+
+.cont{
+    background-color:#1c1c1c;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.form-control{
+    background-color: #2e2e2e;
+    border: none;
+}
+
+label{
+    display: none;
+}
+
+.custom-button{
+    background-color: #5d00ff;
+    color: white;
+    width: 100%;
+    margin: 10px;
+}
+
+.location{
+    margin-top: 4%;
+}
+
+
+a {
+    display: inline-block;
+    padding: 10px;
+    position: relative;
+  }
+  a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.5s ease 0.2s, left 0.5s ease 0.2s;
+    width: 0;
+  }
+  a:hover:after { 
+    width: 100%; 
+    left: 0; 
+    color: #fff;
+  }
+
+  a:hover{
+      color: white;
+      text-decoration: none;
+  }
+
+
+.footer{
+    padding-top: 20px;
+    background-color: #5d00ff;
+    width: 100%;
+}
+
+.footer .line{
+    border-left: 3px solid #fff;
+}
+
+.heading{
+    font-size: 40px;
+    padding-bottom: 10px;
+}
+
+.team .container{
+    background-color: #1c1c1c;
+    margin: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 5px;
+}
+.img-thumbnail{
+    margin-bottom: 10px;
+}
+
+.team h3{
+    border-bottom: 2.5px solid #5d00ff ;
+    width: fit-content;
+    padding-bottom: 5px;
+}
+
+.post{
+    background-color: #2e2e2e;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.danger{
+    background-color: red;
+}

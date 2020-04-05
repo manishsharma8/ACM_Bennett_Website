@@ -1,0 +1,138 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+{% load bootstrap4 %}
+<canvas id="canvas"></canvas>
+<div class="container">
+    <br><br><br>
+    <div class="cont">
+        <h2 class="heading">About Us</h2>
+        <br><br>
+        <p class="lead">ACM Bennett Chapter was formed to introduce students to an educational & scientific Association and develop the habit of professional growth achieved through participation in local chapters. ACM Student Chapter @BU is a group of ignited minds boosted by the technology & computer science who have come together to contribute towards the development of computer community.
+            <br>
+            To Become a Leading Association to provide learning opportunities for students through various activities to achieve technical expertise.
+            Vision: Promoting & Enhancing knowledge & innovation amongst our students and making them more aware of IT industry for excellence in their career.</p>
+    </div>
+    <br><br><br>
+    
+    <div class="events">
+        <h1 class="heading">Events</h1>
+        <div class="row">
+            {% for post in posts %}
+                <div class="col col-12 col-lg-6">
+                    <div class="container post">
+                    <h4><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h4>
+                    <img src="{{ post.profile_pic.url }}" class="img-thumbnail" alt="Sorry">
+                    <p>{{ post.text|truncatechars:200 }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="team">
+        <h1 class="heading">Team Members</h1>
+        <h6>The people who made this possible</h6>
+        <div class="row">
+            <div class="col col-12 col-lg-4">
+                <div class="container">
+                    <img class="img-thumbnail" src="{% static 'team/yala.png' %}" alt="hi">
+                    <h3>Isha</h3>
+                    <p>Our Responsive Chairperson</p>
+                    <a href="https://github.com/ishaputhige "><i class="fa fa-github fa-2x"></i></a>
+                    <a href="www.linkedin.com/in/isha-puthige"><i class="fa fa-linkedin fa-2x"></i></a>
+                </div>
+            </div>
+            <div class="col col-12 col-lg-4">
+                <div class="container">
+                    <img class="img-thumbnail" src="{% static 'team/goofy-drib.png' %}" alt="">
+                    <h3>Vasu</h3>
+                    <p>Most Energetic Vice-Chairperson</p>
+                    <a href="https://github.com/vasu03042000"><i class="fa fa-github fa-2x"></i></a>
+                    <a href="https://www.linkedin.com/in/vasu-gupta-477342175"><i class="fa fa-linkedin fa-2x"></i></a>
+                </div>
+            </div>
+            <div class="col col-12 col-lg-4">
+                <div class="container">
+                    <img class="img-thumbnail" src="{% static 'team/avatar-rogemon.png' %}" alt="">
+                    <h3>Varun</h3>
+                    <p>Most Creative Treasurer</p>
+                    <a href=""><i class="fa fa-github fa-2x"></i></a>
+                    <a href=""><i class="fa fa-linkedin fa-2x"></i></a>
+                </div>
+            </div>
+            <div class="col col-12 col-lg-4">
+                <div class="container">
+                    <img class="img-thumbnail" src="{% static 'team/danavatar.png' %}" alt="">
+                    <h3>Prachi</h3>
+                    <p> Best Secretary Ever!!</p>
+                    <a href="https://github.com/vkg5"><i class="fa fa-github fa-2x"></i></a>
+                    <a href="https://www.linkedin.com/in/varun-k-gupta-b5730415a"><i class="fa fa-linkedin fa-2x"></i></a>
+                </div>
+            </div>
+            <div class="col col-12 col-lg-4">
+                <div class="container">
+                    <img class="img-thumbnail" src="{% static 'team/mike-dribs.png' %}" alt="">
+                    <h3>Sahil</h3>
+                    <p>Most Talented Technical Head</p>
+                    <a href=""><i class="fa fa-github fa-2x"></i></a>
+                    <a href=""><i class="fa fa-linkedin fa-2x"></i></a>       
+                </div>      
+            </div>
+        </div>
+    </div>
+    
+    <br><br><br>
+    <div class="cont">
+        <h1 class="heading">Contact Us</h1>
+        <div class="row">
+            <form method="POST" class="col-md-6" action="">
+                <br><br>
+                {% csrf_token %}
+                {% bootstrap_form form %}
+                <input type="submit" class="btn custom-button" value="Send">
+            </form>
+            <div class="location col-md-6">
+                <h4><i class="fa fa-map-marker" style="font-size:30px"></i><a href="https://www.bennett.edu.in/">  Bennett University</a></h4>
+                <h5>Plot Nos 8-11, TechZone 2, Greater Noida, Uttar Pradesh 201310</h5>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+</div>
+
+<!-- Footer -->
+<section class="footer" id="footer">
+    <div class="container">
+      <div class="row text-center text-xs-center text-sm-left text-md-left">
+        <div class="col-xs-12 col-sm-4 col-md-4">
+          <h3>Quick links</h3>
+          <ul class="list-unstyled quick-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Work</a></li>
+            <li><a href="#team">Our Team</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-xs-12 col-sm-4 col-md-4">
+            <ul class="list-unstyled list-inline social text-center">
+                <h3 class="line">Reach Us</h3>
+                <li class="list-inline-item"><a href="https://instagram.com/acm_bu"><i class="fa fa-instagram"></i></a></li>    
+            </ul>  
+        </div>
+
+        <div class="col-xs-12 col-sm-4 col-md-4">
+            <ul class="list-unstyled list-inline social text-center">
+                <h3 class="line">WorkArea</h3>
+                <li><a href="https://www.bennett.edu.in/">Bennett University</a></li>
+            </ul>      
+        </div>
+      </div>
+    </div>
+</section>
+
+{% endblock %}
