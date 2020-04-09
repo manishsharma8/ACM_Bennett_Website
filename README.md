@@ -13,5 +13,16 @@ Clone this project at the desired location
 git clone https://github.com/manishsharma8/ACM_Bennett_Website.git
 ```
 Change the current directory in terminal to the project directory <br>
+Install Requirements
+```
+pip install -r requirements.txt
+```
+Migrate
+```
+python manage.py makemigrations
+python manage.py migrate
+```
 Finally locally host the website by 
-``` python manage.py runserver```
+```
+python manage.py runserver
+```
